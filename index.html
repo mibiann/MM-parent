@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Khám Phá Sơ Đồ Tư Duy Cùng Con | Vmindsports</title>
-<meta name="description" content="Ứng dụng miễn phí giúp Ba Mẹ hiểu phương pháp Sơ đồ tư duy chuẩn Tony Buzan. 5 bài học tương tác, nhận Chứng nhận và quà tặng đặc biệt cho bé. Vmindsports." />
-<meta property="og:title" content="Khám Phá Sơ Đồ Tư Duy Cùng Con — Vmindsports" />
-<meta property="og:description" content="Ba Mẹ ơi, hãy trải nghiệm 5 bài học Mind Map miễn phí! Hiểu phương pháp giúp con ghi nhớ tốt hơn + Nhận Chứng nhận. Vmindsports." />
+<title>Khám Phá Sơ Đồ Tư Duy Cùng Bé | Vmindsports</title>
+<meta name="description" content="Ứng dụng miễn phí giúp Anh/Chị hiểu phương pháp Sơ đồ tư duy chuẩn Tony Buzan. 5 bài học tương tác, nhận Chứng nhận và quà tặng đặc biệt cho bé. Vmindsports." />
+<meta property="og:title" content="Khám Phá Sơ Đồ Tư Duy Cùng Bé — Vmindsports" />
+<meta property="og:description" content="Anh/Chị ơi, hãy trải nghiệm 5 bài học Mind Map miễn phí! Hiểu phương pháp giúp bé ghi nhớ tốt hơn + Nhận Chứng nhận. Vmindsports." />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -82,80 +82,80 @@ document.addEventListener('click', function init() { SoundManager.init(); docume
 // DATA
 // ============================================================
 const LEVELS = [
-  { id:'preschool', icon:'👶', name:'Con đang học Mầm non - Lớp 2', desc:'Giúp bé tập trung & ghi nhớ bài thông qua hình ảnh và màu sắc', color:'from-pink-400 to-rose-500' },
-  { id:'primary', icon:'📗', name:'Con đang học Lớp 3 - Lớp 5', desc:'Hỗ trợ con hệ thống hóa bài vở, ôn thi hiệu quả', color:'from-bee-500 to-ocean-500' },
-  { id:'secondary', icon:'📘', name:'Con đang học Lớp 6 - Lớp 9', desc:'Rèn tư duy phân tích, tóm tắt bài nhanh gọn', color:'from-blue-500 to-cyan-500' },
+  { id:'preschool', icon:'👶', name:'Bé đang học Mầm non - Lớp 2', desc:'Giúp bé tập trung & ghi nhớ bài thông qua hình ảnh và màu sắc', color:'from-pink-400 to-rose-500' },
+  { id:'primary', icon:'📗', name:'Bé đang học Lớp 3 - Lớp 5', desc:'Hỗ trợ bé hệ thống hóa bài vở, ôn thi hiệu quả', color:'from-bee-500 to-ocean-500' },
+  { id:'secondary', icon:'📘', name:'Bé đang học Lớp 6 - Lớp 9', desc:'Rèn tư duy phân tích, tóm tắt bài nhanh gọn', color:'from-blue-500 to-cyan-500' },
   { id:'family', icon:'🏡', name:'Ứng dụng cho gia đình & công việc', desc:'Lên kế hoạch, sắp xếp cuộc sống gia đình khoa học', color:'from-emerald-500 to-teal-500' },
 ];
 
 const MODULES = [
   {
-    id: 1, title: 'Mind Map Là Gì?', subtitle: 'Mở rộng không gian ghi nhớ cho con',
+    id: 1, title: 'Mind Map Là Gì?', subtitle: 'Mở rộng không gian ghi nhớ cho bé',
     icon: '🧠', duration: '10 phút', color: 'bee',
     content: {
       imageUrl: 'MM_Bai1.jpg',
-      intro: "Chào Ba Mẹ! Cô Hiếu và Vmindsports rất vui được đồng hành cùng gia đình mình.\n\nPhương pháp ghi chép truyền thống theo dòng rất tuyệt vời để lưu trữ thông tin một cách chi tiết và đầy đủ. Sẽ càng hiệu quả hơn nếu chúng ta kết hợp thêm Sơ đồ Tư duy (Mind Map).\n\nMind Map là phương pháp ghi chép thuận theo tự nhiên: não phóng chiếu ý tưởng ra mọi hướng y như một cái cây tỏa nhánh. Khi kết hợp cả hai phương pháp, việc ghi nhớ của con sẽ trở nên bao quát và nhẹ nhàng hơn rất nhiều.",
+      intro: "Chào Anh/Chị! Cô Hiếu và Vmindsports rất vui được đồng hành cùng gia đình mình.\n\nPhương pháp ghi chép truyền thống theo dòng rất tuyệt vời để lưu trữ thông tin một cách chi tiết và đầy đủ. Sẽ càng hiệu quả hơn nếu chúng ta kết hợp thêm Sơ đồ Tư duy (Mind Map).\n\nMind Map là phương pháp ghi chép thuận theo tự nhiên: não phóng chiếu ý tưởng ra mọi hướng y như một cái cây tỏa nhánh. Khi kết hợp cả hai phương pháp, việc ghi nhớ của bé sẽ trở nên bao quát và nhẹ nhàng hơn rất nhiều.",
       keyPoints: [
-        { title: 'Sự kết hợp hoàn hảo cho bộ não', text: 'Cách ghi chép [I, II, III...] theo tuần tự rất tốt để rèn luyện não trái (logic, trật tự). Khi bổ sung thêm Sơ đồ tư duy, não phải của bé sẽ được kích hoạt cùng lúc thông qua màu sắc và hình vẽ. Sự kết hợp này giúp năng lực ghi nhớ của con được nhân lên mạnh mẽ.' },
-        { title: 'Công cụ chuẩn Quốc tế', text: 'Mind Map được Giáo sư Tony Buzan sáng tạo từ thập niên 70. Vmindsports tự hào được chia sẻ cùng Ba Mẹ những quy luật chuẩn mực nhất, giúp con ứng dụng phương pháp này một cách chính xác và hiệu quả cao nhất.' },
-        { title: '✨ 5 Ứng dụng kết hợp cho bé', text: '1. ÔN THI: Tóm gọn kiến thức cốt lõi của một chương sách vào 1 mặt giấy A4.\n2. HỌC TỪ VỰNG: Ghi nhớ cụm từ mới Tiếng Anh qua hình ảnh liên tưởng.\n3. KỂ CHUYỆN: Tóm tắt lại mạch truyện yêu thích theo góc nhìn của bé.\n4. LÊN KẾ HOẠCH: Cùng Ba Mẹ xếp đồ đi dã ngoại cuối tuần.\n5. TỰ TIN ĐỨNG LỚP: Hỗ trợ con nhớ dàn ý khi thuyết trình.' }
+        { title: 'Sự kết hợp hoàn hảo cho bộ não', text: 'Cách ghi chép [I, II, III...] theo tuần tự rất tốt để rèn luyện não trái (logic, trật tự). Khi bổ sung thêm Sơ đồ tư duy, não phải của bé sẽ được kích hoạt cùng lúc thông qua màu sắc và hình vẽ. Sự kết hợp này giúp năng lực ghi nhớ của bé được nhân lên mạnh mẽ.' },
+        { title: 'Công cụ chuẩn Quốc tế', text: 'Mind Map được Giáo sư Tony Buzan sáng tạo từ thập niên 70. Vmindsports tự hào được chia sẻ cùng Anh/Chị những quy luật chuẩn mực nhất, giúp bé ứng dụng phương pháp này một cách chính xác và hiệu quả cao nhất.' },
+        { title: '✨ 5 Ứng dụng kết hợp cho bé', text: '1. ÔN THI: Tóm gọn kiến thức cốt lõi của một chương sách vào 1 mặt giấy A4.\n2. HỌC TỪ VỰNG: Ghi nhớ cụm từ mới Tiếng Anh qua hình ảnh liên tưởng.\n3. KỂ CHUYỆN: Tóm tắt lại mạch truyện yêu thích theo góc nhìn của bé.\n4. LÊN KẾ HOẠCH: Cùng Anh/Chị xếp đồ đi dã ngoại cuối tuần.\n5. TỰ TIN ĐỨNG LỚP: Hỗ trợ bé nhớ dàn ý khi thuyết trình.' }
       ],
       levelExamples: {
-        beginner: '💡 Mẹo nhỏ Tối nay: Khi con kể chuyện trên trường, bên cạnh việc lắng nghe, Ba Mẹ có thể lấy 1 tờ giấy trắng, vẽ 1 vòng tròn ở giữa và gợi ý: "Nào, con kể tiếp đi, mỗi câu chuyện mình cùng vẽ 1 nhánh tỏa ra nhé!"',
-        intermediate: '💡 Lời khen diệu kỳ: Thay vì kỳ vọng một bức vẽ hoàn hảo, chỉ cần con chịu cầm màu lên, Ba Mẹ có thể khích lệ: "Màu con chọn rực rỡ quá, mẹ/ba rất thích nhánh này!"',
+        beginner: '💡 Mẹo nhỏ Tối nay: Khi bé kể chuyện trên trường, bên cạnh việc lắng nghe, Anh/Chị có thể lấy 1 tờ giấy trắng, vẽ 1 vòng tròn ở giữa và gợi ý: "Nào, bé kể tiếp đi, mỗi câu chuyện mình cùng vẽ 1 nhánh tỏa ra nhé!"',
+        intermediate: '💡 Lời khen diệu kỳ: Thay vì kỳ vọng một bức vẽ hoàn hảo, chỉ cần bé chịu cầm màu lên, Anh/Chị có thể khích lệ: "Màu bé chọn rực rỡ quá, mẹ/ba rất thích nhánh này!"',
         advanced: '💡 Trò chơi Gia đình: Cả nhà có thể cùng vẽ 1 bức Mind Map "Thực đơn cuối tuần". Mỗi người chọn đóng góp 1 nhánh. Bé sẽ cảm nhận được việc học cũng vui như một trò chơi cùng gia đình.'
       }
     },
     exercise: {
       type: 'identify-system', 
-      title: 'Con đang học theo cách nào?',
-      instructions: 'Ba Mẹ hãy thử quan sát và phân loại những tình huống học tập sau đây của con nhé:',
+      title: 'Bé đang học theo cách nào?',
+      instructions: 'Anh/Chị hãy thử quan sát và phân loại những tình huống học tập sau đây của bé nhé:',
       items: [
-        { id: 'i1', text: 'Con chép bài từ đầu đến cuối theo dàn ý I, II, III', answer: 'linear' },
-        { id: 'i2', text: 'Con lấy giấy trắng, vẽ một hình ở giữa rồi tỏa nhánh ra xung quanh', answer: 'mindmap' },
-        { id: 'i3', text: 'Quyển vở của con lưu trữ đầy đủ câu chữ bằng một màu mực', answer: 'linear' },
-        { id: 'i4', text: 'Con kết hợp bút nhiều màu để highlight và vẽ icon minh họa', answer: 'mindmap' },
-        { id: 'i5', text: 'Con cố gắng viết thật cẩn thận để không sót ý nào của cô giáo', answer: 'linear' }
+        { id: 'i1', text: 'Bé chép bài từ đầu đến cuối theo dàn ý I, II, III', answer: 'linear' },
+        { id: 'i2', text: 'Bé lấy giấy trắng, vẽ một hình ở giữa rồi tỏa nhánh ra xung quanh', answer: 'mindmap' },
+        { id: 'i3', text: 'Quyển vở của bé lưu trữ đầy đủ câu chữ bằng một màu mực', answer: 'linear' },
+        { id: 'i4', text: 'Bé kết hợp bút nhiều màu để highlight và vẽ icon minh họa', answer: 'mindmap' },
+        { id: 'i5', text: 'Bé cố gắng viết thật cẩn thận để không sót ý nào của cô giáo', answer: 'linear' }
       ]
     },
     assessment: {
       title: 'Câu hỏi Tương tác: Hiểu về Mind Map',
       questions: [
         { q: 'Vì sao kết hợp Mind Map lại giúp bé tăng cường khả năng ghi nhớ?', opts: ['Vì kích hoạt thêm bán cầu não phải (màu sắc, hình ảnh) bên cạnh bán cầu não trái (từ khóa, logic)', 'Vì Mind Map thay thế hoàn toàn được sách giáo khoa', 'Vì bé không cần phải đọc lại bài nữa sau khi vẽ xong'], correct: 0 },
-        { q: 'Theo Ba Mẹ, Mind Map có thể hỗ trợ con tốt nhất trong tình huống nào ở nhà?', opts: ['Thay thế hoàn toàn vở viết trên lớp của con', 'Kết hợp với vở ghi chép để tóm tắt bao quát bài học hoặc lên kế hoạch đi chơi cùng gia đình', 'Giúp con chép lại y nguyên từng chữ trong sách cho đẹp'], correct: 1 },
+        { q: 'Theo Anh/Chị, Mind Map có thể hỗ trợ bé tốt nhất trong tình huống nào ở nhà?', opts: ['Thay thế hoàn toàn vở viết trên lớp của bé', 'Kết hợp với vở ghi chép để tóm tắt bao quát bài học hoặc lên kế hoạch đi chơi cùng gia đình', 'Giúp bé chép lại y nguyên từng chữ trong sách cho đẹp'], correct: 1 },
         { q: 'Sự khác biệt cốt lõi của Mind Map CHUẨN Tony Buzan là gì?', opts: ['Sử dụng càng nhiều màu sắc rực rỡ càng tốt mà không cần theo quy luật', 'Ý tưởng tỏa ra từ một hình ảnh trung tâm, trên những đường nhánh cong tự nhiên, uyển chuyển', 'Vẽ bằng các hình khối sắc nét như hình vuông, tam giác'], correct: 1 }
       ]
     }
   },
   {
-    id: 2, title: '5 "Thần Chú" Mind Map', subtitle: 'Gợi ý đồng hành cùng con chuẩn xác',
+    id: 2, title: '5 "Thần Chú" Mind Map', subtitle: 'Gợi ý đồng hành cùng bé chuẩn xác',
     icon: '📏', duration: '15 phút', color: 'ocean',
     content: {
       imageUrl: 'MM_Bai2.jpg',
-      intro: "Để con tự do sáng tạo là một điều vô cùng tuyệt vời. Đồng thời, nếu sự sáng tạo đó được đặt trên một bộ khung chuẩn mực, bộ não của con sẽ ghi nhớ hiệu quả hơn gấp bội!\n\nVmindsports xin gửi đến Ba Mẹ 5 câu 'thần chú' nhỏ. Ba Mẹ có thể tham khảo để làm 'Huấn luyện viên' hỗ trợ con tại nhà nhé:",
+      intro: "Để bé tự do sáng tạo là một điều vô cùng tuyệt vời. Đồng thời, nếu sự sáng tạo đó được đặt trên một bộ khung chuẩn mực, bộ não của bé sẽ ghi nhớ hiệu quả hơn gấp bội!\n\nVmindsports xin gửi đến Anh/Chị 5 câu 'thần chú' nhỏ. Anh/Chị có thể tham khảo để làm 'Huấn luyện viên' hỗ trợ bé tại nhà nhé:",
       keyPoints: [
-        { title: '1. NHÁNH: "Mềm mại như sừng trâu"', text: '• Nhánh chính chạm trực tiếp vào hình trung tâm, gốc to và thuôn nhọn dần về ngọn.\n• Ba Mẹ có thể khuyến khích con lượn sóng tay tự nhiên thay vì dùng thước kẻ.\n• Chiều dài nhánh vừa bằng độ dài của chữ.' },
-        { title: '2. TỪ KHÓA: "Một nhánh một từ"', text: '• Điểm tối ưu: Trình bày 1 từ khóa cốt lõi trên 1 nhánh để dễ liên tưởng.\n• Khuyến khích con dùng CHỮ IN HOA cho nhánh chính để não chụp hình chữ rõ nét hơn.\n• Gợi ý nhỏ cho con: "Mình cho bạn chữ ngồi ngay ngắn trên nhánh nhé!"' },
+        { title: '1. NHÁNH: "Mềm mại như sừng trâu"', text: '• Nhánh chính chạm trực tiếp vào hình trung tâm, gốc to và thuôn nhọn dần về ngọn.\n• Anh/Chị có thể khuyến khích bé lượn sóng tay tự nhiên thay vì dùng thước kẻ.\n• Chiều dài nhánh vừa bằng độ dài của chữ.' },
+        { title: '2. TỪ KHÓA: "Một nhánh một từ"', text: '• Điểm tối ưu: Trình bày 1 từ khóa cốt lõi trên 1 nhánh để dễ liên tưởng.\n• Khuyến khích bé dùng CHỮ IN HOA cho nhánh chính để não chụp hình chữ rõ nét hơn.\n• Gợi ý nhỏ cho bé: "Mình cho bạn chữ ngồi ngay ngắn trên nhánh nhé!"' },
         { title: '3. MÀU SẮC: "Nóng - Lạnh đan xen"', text: '• Xếp xen kẽ một màu Nóng (Đỏ, Cam, Vàng) rồi đến một màu Lạnh (Xanh dương, Xanh lá).\n• Toàn bộ một nhóm nhánh (từ chữ, đường viền đến hình vẽ nhỏ) nên dùng CÙNG MỘT TÔNG MÀU để não bộ dễ dàng hệ thống hóa.' },
-        { title: '4. HÌNH ẢNH: "Vui tươi và thả lỏng"', text: '• Hình trung tâm ưu tiên sự rực rỡ (từ 4 màu trở lên).\n• Ba Mẹ hãy trân trọng những hình vẽ minh họa (icon) nhỏ xinh của con. Con vẽ theo góc nhìn của con, miễn là con thấy vui và tự hào!' },
+        { title: '4. HÌNH ẢNH: "Vui tươi và thả lỏng"', text: '• Hình trung tâm ưu tiên sự rực rỡ (từ 4 màu trở lên).\n• Anh/Chị hãy trân trọng những hình vẽ minh họa (icon) nhỏ xinh của bé. Bé vẽ theo góc nhìn của bé, miễn là bé thấy vui và tự hào!' },
         { title: '5. BỐ CỤC: "Theo chiều kim đồng hồ"', text: '• Nhánh đầu tiên thường xuất phát ở góc 1 giờ.\n• Đọc xoay tròn theo chiều kim đồng hồ, giúp tạo quán tính tự nhiên và trôi chảy cho ánh mắt.' }
       ],
       levelExamples: {
-        beginner: '💡 Nút gỡ rối cho Ba Mẹ: Nếu con quen dùng thước kẻ, Ba Mẹ có thể nhẹ nhàng gợi ý: "Mình thử vẽ đường đi của bạn kiến quanh co cho bài vẽ thêm sinh động con nhé!"',
-        intermediate: '💡 Khi con viết câu quá dài: Ba Mẹ có thể hỏi gợi mở: "Nếu chỉ được giữ lại đúng 1 chữ quan trọng nhất, con sẽ chọn chữ nào nhỉ?". Đây là cách rèn kỹ năng chắt lọc rất nhẹ nhàng.',
-        advanced: '💡 Nuôi dưỡng tự tin: Nếu con ngần ngại vì chưa biết vẽ, Ba Mẹ có thể động viên: "Mind Map chỉ cần những hình khối đơn giản thôi con ạ. 3 vòng tròn ghép lại cũng thành một đám mây rất xinh rồi!"'
+        beginner: '💡 Nút gỡ rối cho Anh/Chị: Nếu bé quen dùng thước kẻ, Anh/Chị có thể nhẹ nhàng gợi ý: "Mình thử vẽ đường đi của bạn kiến quanh co cho bài vẽ thêm sinh động bé nhé!"',
+        intermediate: '💡 Khi bé viết câu quá dài: Anh/Chị có thể hỏi gợi mở: "Nếu chỉ được giữ lại đúng 1 chữ quan trọng nhất, bé sẽ chọn chữ nào nhỉ?". Đây là cách rèn kỹ năng chắt lọc rất nhẹ nhàng.',
+        advanced: '💡 Nuôi dưỡng tự tin: Nếu bé ngần ngại vì chưa biết vẽ, Anh/Chị có thể động viên: "Mind Map chỉ cần những hình khối đơn giản thôi bé ạ. 3 vòng tròn ghép lại cũng thành một đám mây rất xinh rồi!"'
       }
     },
     exercise: {
       type: 'identify-system',
-      title: 'Tình huống Đồng hành cùng con',
-      instructions: 'Trong quá trình cùng con vẽ Mind Map, Ba Mẹ thấy cách xử lý nào sau đây mang lại sự khích lệ tốt nhất cho con?',
+      title: 'Tình huống Đồng hành cùng bé',
+      instructions: 'Trong quá trình cùng bé vẽ Mind Map, Anh/Chị thấy cách xử lý nào sau đây mang lại sự khích lệ tốt nhất cho bé?',
       items: [
-        { id: 'r1', text: 'Con dùng bút Đỏ viết chữ lên nhánh màu Xanh Dương. Ba Mẹ gợi ý con thử dùng bút cùng màu Xanh để nhánh trông hài hòa hơn.', answer: 'dung' },
-        { id: 'r2', text: 'Thấy con vẽ nét thẳng bằng thước, Ba Mẹ bắt con tẩy đi và tự tay vẽ lại cho đúng chuẩn.', answer: 'sai' },
-        { id: 'r3', text: 'Con ghi cả câu dài ra ngoài nhánh. Ba Mẹ hướng dẫn con gạch chân 1 từ quan trọng nhất rồi viết lại từ đó.', answer: 'dung' },
-        { id: 'r4', text: 'Dù con vẽ hình con mèo trông hơi giống con thỏ, Ba Mẹ vẫn khen ngợi sự sáng tạo độc đáo của con.', answer: 'dung' },
-        { id: 'r5', text: 'Con bắt đầu nhánh đầu tiên ở góc 6 giờ, Ba Mẹ không nói gì vì cho rằng luật lệ là không cần thiết.', answer: 'sai' }
+        { id: 'r1', text: 'Bé dùng bút Đỏ viết chữ lên nhánh màu Xanh Dương. Anh/Chị gợi ý bé thử dùng bút cùng màu Xanh để nhánh trông hài hòa hơn.', answer: 'dung' },
+        { id: 'r2', text: 'Thấy bé vẽ nét thẳng bằng thước, Anh/Chị bắt bé tẩy đi và tự tay vẽ lại cho đúng chuẩn.', answer: 'sai' },
+        { id: 'r3', text: 'Bé ghi cả câu dài ra ngoài nhánh. Anh/Chị hướng dẫn bé gạch chân 1 từ quan trọng nhất rồi viết lại từ đó.', answer: 'dung' },
+        { id: 'r4', text: 'Dù bé vẽ hình con mèo trông hơi giống con thỏ, Anh/Chị vẫn khen ngợi sự sáng tạo độc đáo của bé.', answer: 'dung' },
+        { id: 'r5', text: 'Bé bắt đầu nhánh đầu tiên ở góc 6 giờ, Anh/Chị không nói gì vì cho rằng luật lệ là không cần thiết.', answer: 'sai' }
       ]
     },
     assessment: {
@@ -163,7 +163,7 @@ const MODULES = [
       questions: [
         { q: 'Theo gợi ý chuẩn mực từ Vmindsports, nét vẽ Nhánh chính nên có hình dáng thế nào để tự nhiên nhất?', opts: ['Nên kẻ thẳng tắp để thể hiện sự nghiêm túc', 'Gốc to, thuôn nhọn dần về ngọn, cong mềm mại như sừng trâu', 'Vẽ thành các hình zíc-zắc đứt nét'], correct: 1 },
         { q: 'Quy tắc Nóng-Lạnh đan xen mang lại lợi ích gì cho trải nghiệm học của bé?', opts: ['Giúp bản vẽ hài hòa, chống nhàm chán và mắt bé không bị mỏi khi nhìn lâu', 'Để bức tranh trông giống cầu vồng', 'Chỉ là quy định ngẫu nhiên không có mục đích cụ thể'], correct: 0 },
-        { q: 'Khi con viết chữ "bay lơ lửng" không chạm vào nhánh, Ba Mẹ có thể khích lệ con bằng câu nói nào?', opts: ['"Con vẽ sai rồi, chữ phải nằm trong một cái khung vuông"', '"Bạn chữ đang bay mất kìa, con cho bạn ấy NGỒI LÊN nhánh cho vững chắc nhé!"', '"Con muốn viết chỗ nào trên giấy cũng được"'], correct: 1 }
+        { q: 'Khi bé viết chữ "bay lơ lửng" không chạm vào nhánh, Anh/Chị có thể khích lệ bé bằng câu nói nào?', opts: ['"Bé vẽ sai rồi, chữ phải nằm trong một cái khung vuông"', '"Bạn chữ đang bay mất kìa, bé cho bạn ấy NGỒI LÊN nhánh cho vững chắc nhé!"', '"Bé muốn viết chỗ nào trên giấy cũng được"'], correct: 1 }
       ]
     }
   },
@@ -172,22 +172,22 @@ const MODULES = [
     icon: '🎨', duration: '15 phút', color: 'bee',
     content: {
       imageUrl: 'MM_Bai3.jpg',
-      intro: "Hình trung tâm đóng vai trò như 'trái tim' của bản đồ! Một hình ảnh trung tâm nhiều màu sắc sẽ kích thích sự tò mò, giúp bộ não của con khởi động trạng thái sẵn sàng học hỏi.\n\nBên cạnh việc viết tiêu đề bài học truyền thống, Ba Mẹ có thể khích lệ con thử phác họa một hình ảnh vui nhộn ở ngay giữa trang giấy xem sao nhé!",
+      intro: "Hình trung tâm đóng vai trò như 'trái tim' của bản đồ! Một hình ảnh trung tâm nhiều màu sắc sẽ kích thích sự tò mò, giúp bộ não của bé khởi động trạng thái sẵn sàng học hỏi.\n\nBên cạnh việc viết tiêu đề bài học truyền thống, Anh/Chị có thể khích lệ bé thử phác họa một hình ảnh vui nhộn ở ngay giữa trang giấy xem sao nhé!",
       keyPoints: [
         { title: 'Vị trí của Trái tim', text: '• Nằm ngay ngắn ở giữa trang giấy khổ ngang.\n• Độ lớn vừa phải (khoảng 1 nắm tay bé cho tờ giấy A4).\n• Khuyến khích hình ảnh hòa vào nền giấy trắng tự nhiên, không cần đóng khung cứng nhắc.' },
-        { title: 'Quy luật "4 Sắc màu"', text: '• Hình trung tâm sẽ rực rỡ nhất khi có từ 4 màu sắc trở lên, giúp đánh thức bán cầu não phải hiệu quả.\n• Nếu chủ đề là "Trái Cây", thay vì viết chữ to, con có thể vẽ hẳn một rổ trái cây đầy màu sắc.' },
-        { title: 'Trân trọng nét vẽ ngây ngô', text: '• Nét vẽ của con dù ngây ngô nhưng lại mang đậm dấu ấn cá nhân.\n• Chính sự độc bản ấy sẽ giúp bộ não của BÉ ghi nhớ lâu hơn, vì đó là tác phẩm do chính bé nỗ lực tạo ra.' }
+        { title: 'Quy luật "4 Sắc màu"', text: '• Hình trung tâm sẽ rực rỡ nhất khi có từ 4 màu sắc trở lên, giúp đánh thức bán cầu não phải hiệu quả.\n• Nếu chủ đề là "Trái Cây", thay vì viết chữ to, bé có thể vẽ hẳn một rổ trái cây đầy màu sắc.' },
+        { title: 'Trân trọng nét vẽ ngây ngô', text: '• Nét vẽ của bé dù ngây ngô nhưng lại mang đậm dấu ấn cá nhân.\n• Chính sự độc bản ấy sẽ giúp bộ não của BÉ ghi nhớ lâu hơn, vì đó là tác phẩm do chính bé nỗ lực tạo ra.' }
       ],
       levelExamples: {
-        beginner: '💡 Mẹo Gợi mở: Nếu con chưa biết vẽ chủ đề "Kỳ nghỉ hè", Ba Mẹ có thể hỏi: "Mùa hè con thích nhất là gì nhỉ? Ăn kem hay tắm biển? Mình cùng vẽ 1 cây kem 4 màu nhé!"',
-        intermediate: '💡 Khi con e ngại: Nếu con bảo "Con vẽ không giống con mèo", Ba Mẹ hãy mỉm cười đáp: "Mind Map của con thì đây là chú mèo biến hình đặc biệt, càng sáng tạo con càng dễ nhớ bài!"',
-        advanced: '💡 Thử thách màu sắc: Ba Mẹ có thể gợi ý con dùng những màu nổi bật như Đỏ, Cam tươi để điểm xuyết, bài vẽ của con sẽ bừng sáng và tràn đầy năng lượng.'
+        beginner: '💡 Mẹo Gợi mở: Nếu bé chưa biết vẽ chủ đề "Kỳ nghỉ hè", Anh/Chị có thể hỏi: "Mùa hè bé thích nhất là gì nhỉ? Ăn kem hay tắm biển? Mình cùng vẽ 1 cây kem 4 màu nhé!"',
+        intermediate: '💡 Khi bé e ngại: Nếu bé bảo "Bé vẽ không giống con mèo", Anh/Chị hãy mỉm cười đáp: "Mind Map của bé thì đây là chú mèo biến hình đặc biệt, càng sáng tạo bé càng dễ nhớ bài!"',
+        advanced: '💡 Thử thách màu sắc: Anh/Chị có thể gợi ý bé dùng những màu nổi bật như Đỏ, Cam tươi để điểm xuyết, bài vẽ của bé sẽ bừng sáng và tràn đầy năng lượng.'
       }
     },
     exercise: {
       type: 'color-matching',
-      title: 'Giúp con phối màu đan xen',
-      instructions: 'Ba Mẹ hãy tưởng tượng nhánh số 1 (hướng 1 giờ) con đã chọn màu Đỏ (Tông Nóng). Vậy để áp dụng quy luật luân phiên Nóng - Lạnh, nhánh tiếp theo con nên chọn màu gì?',
+      title: 'Giúp bé phối màu đan xen',
+      instructions: 'Anh/Chị hãy tưởng tượng nhánh số 1 (hướng 1 giờ) bé đã chọn màu Đỏ (Tông Nóng). Vậy để áp dụng quy luật luân phiên Nóng - Lạnh, nhánh tiếp theo bé nên chọn màu gì?',
       items: [
         { id: 'c2', position: 'Nhánh 2 (hướng 3 giờ)', answer: 'blue', options: ['red', 'blue', 'brown', 'orange'] },
         { id: 'c3', position: 'Nhánh 3 (hướng 5 giờ)', answer: 'orange', options: ['green', 'blue', 'orange', 'purple'] },
@@ -200,7 +200,7 @@ const MODULES = [
       questions: [
         { q: 'Vì sao Hình trung tâm được khuyến khích sử dụng từ 4 màu sắc trở lên?', opts: ['Để bức tranh trông phức tạp hơn', 'Để đủ sự rực rỡ, giúp kích thích bán cầu não phải và sự hứng thú của bé', 'Vì quy định bắt buộc phải dùng hết hộp màu'], correct: 1 },
         { q: 'Khi vẽ hình trung tâm, điều gì có thể vô tình làm giới hạn sự sáng tạo của bé?', opts: ['Bé sử dụng kết hợp nhiều màu sắc nóng lạnh', 'Chỉ vẽ một vòng tròn đóng khung lại rồi viết toàn chữ cái vào trong', 'Bé vẽ hình đám mây tự do không có khuôn mẫu'], correct: 1 },
-        { q: 'Ba Mẹ nên phản hồi thế nào khi thấy hình trung tâm con vẽ có nét ngây ngô, chưa chuẩn tỷ lệ?', opts: ['Tự tay lấy tẩy xóa đi và vẽ lại giúp con cho đẹp', 'Trân trọng sự nỗ lực, giải thích cho con hiểu nét vẽ càng mang tính cá nhân thì bộ não càng dễ ghi nhớ', 'Bảo con lật trang khác vẽ lại từ đầu'], correct: 1 }
+        { q: 'Anh/Chị nên phản hồi thế nào khi thấy hình trung tâm bé vẽ có nét ngây ngô, chưa chuẩn tỷ lệ?', opts: ['Tự tay lấy tẩy xóa đi và vẽ lại giúp bé cho đẹp', 'Trân trọng sự nỗ lực, giải thích cho bé hiểu nét vẽ càng mang tính cá nhân thì bộ não càng dễ ghi nhớ', 'Bảo bé lật trang khác vẽ lại từ đầu'], correct: 1 }
       ]
     }
   },
@@ -209,22 +209,22 @@ const MODULES = [
     icon: '✍️', duration: '10 phút', color: 'ocean',
     content: {
       imageUrl: 'MM_Bai4.jpg',
-      intro: "Viết những câu văn hoàn chỉnh là nền tảng vô cùng quan trọng để con phát triển ngôn ngữ. Sẽ càng tuyệt vời hơn nếu sau khi hiểu bài, con rèn luyện thêm kỹ năng gom ý thành những TỪ KHÓA cốt lõi.\n\nKhi con học cách chắt lọc một đoạn văn thành 1-2 từ khóa, bộ não của con đang tích cực phân tích, liên kết và tổng hợp thông tin một cách chủ động.",
+      intro: "Viết những câu văn hoàn chỉnh là nền tảng vô cùng quan trọng để bé phát triển ngôn ngữ. Sẽ càng tuyệt vời hơn nếu sau khi hiểu bài, bé rèn luyện thêm kỹ năng gom ý thành những TỪ KHÓA cốt lõi.\n\nKhi bé học cách chắt lọc một đoạn văn thành 1-2 từ khóa, bộ não của bé đang tích cực phân tích, liên kết và tổng hợp thông tin một cách chủ động.",
       keyPoints: [
-        { title: 'Chỉ 1 từ cho mỗi nhánh', text: 'Đây là thử thách thú vị giúp mang lại hiệu quả kỳ diệu. Việc chia nhỏ thông tin thành từng từ đơn lẻ sẽ "mở khóa" không gian tư duy, cho phép con dễ dàng thêm các ý tưởng liên tưởng tiếp theo.' },
-        { title: 'Nghệ thuật tinh giản', text: 'Ba Mẹ có thể hướng dẫn con thử "ẩn đi" các từ nối bổ trợ (là, thì, mà, của...) và chỉ giữ lại những Danh từ, Động từ, Tính từ chứa đựng ý nghĩa quan trọng nhất của câu.' },
-        { title: 'Phân cấp kích thước (Hierarchy)', text: 'Từ khóa ở nhánh chính nên viết TO và IN HOA. Các từ ở nhánh phụ có thể nhỏ dần lại. Phương pháp này rèn luyện cho con tư duy phân cấp ý chính - ý phụ, rất hữu ích khi con làm Tập làm văn.' }
+        { title: 'Chỉ 1 từ cho mỗi nhánh', text: 'Đây là thử thách thú vị giúp mang lại hiệu quả kỳ diệu. Việc chia nhỏ thông tin thành từng từ đơn lẻ sẽ "mở khóa" không gian tư duy, cho phép bé dễ dàng thêm các ý tưởng liên tưởng tiếp theo.' },
+        { title: 'Nghệ thuật tinh giản', text: 'Anh/Chị có thể hướng dẫn bé thử "ẩn đi" các từ nối bổ trợ (là, thì, mà, của...) và chỉ giữ lại những Danh từ, Động từ, Tính từ chứa đựng ý nghĩa quan trọng nhất của câu.' },
+        { title: 'Phân cấp kích thước (Hierarchy)', text: 'Từ khóa ở nhánh chính nên viết TO và IN HOA. Các từ ở nhánh phụ có thể nhỏ dần lại. Phương pháp này rèn luyện cho bé tư duy phân cấp ý chính - ý phụ, rất hữu ích khi bé làm Tập làm văn.' }
       ],
       levelExamples: {
-        beginner: '💡 Trò chơi Rút gọn: Khi đi dạo, Ba Mẹ thử đố: "Con thỏ lông trắng đang ăn củ cà rốt. Nếu chỉ giữ lại 2 chữ quan trọng nhất con sẽ chọn chữ nào?". Con sẽ hào hứng đáp: "THỎ - CÀ RỐT!"',
-        intermediate: '💡 Xử lý tình huống: Nếu con lỡ viết "Cây táo màu xanh" lên 1 nhánh. Ba Mẹ có thể gợi ý: "Mình thử viết [CÂY TÁO] ở nhánh to, rồi tẽ ra một nhánh nhỏ viết [MÀU XANH] xem có đẹp hơn không nhé!"',
-        advanced: '💡 Hình khối chữ: Khuyến khích con viết chữ IN HOA dầy dặn ở nhánh chính. Những nét chữ rõ ràng này sẽ giúp bộ não chụp lại bức ảnh thông tin sắc nét hơn.'
+        beginner: '💡 Trò chơi Rút gọn: Khi đi dạo, Anh/Chị thử đố: "Con thỏ lông trắng đang ăn củ cà rốt. Nếu chỉ giữ lại 2 chữ quan trọng nhất bé sẽ chọn chữ nào?". Bé sẽ hào hứng đáp: "THỎ - CÀ RỐT!"',
+        intermediate: '💡 Xử lý tình huống: Nếu bé lỡ viết "Cây táo màu xanh" lên 1 nhánh. Anh/Chị có thể gợi ý: "Mình thử viết [CÂY TÁO] ở nhánh to, rồi tẽ ra một nhánh nhỏ viết [MÀU XANH] xem có đẹp hơn không nhé!"',
+        advanced: '💡 Hình khối chữ: Khuyến khích bé viết chữ IN HOA dầy dặn ở nhánh chính. Những nét chữ rõ ràng này sẽ giúp bộ não chụp lại bức ảnh thông tin sắc nét hơn.'
       }
     },
     exercise: {
       type: 'keyword-extraction',
-      title: 'Giúp con tìm "Từ Khóa Vàng"',
-      instructions: 'Giả sử có một đoạn thông tin: "Quả cam có màu cam rất đẹp, cung cấp nhiều vitamin C giúp cơ thể tăng sức đề kháng, chống lại bệnh tật."\n\nNếu muốn tóm tắt lại bằng Sơ đồ tư duy, Ba Mẹ sẽ gợi ý con chọn những từ khóa cốt lõi nào?',
+      title: 'Giúp bé tìm "Từ Khóa Vàng"',
+      instructions: 'Giả sử có một đoạn thông tin: "Quả cam có màu cam rất đẹp, cung cấp nhiều vitamin C giúp cơ thể tăng sức đề kháng, chống lại bệnh tật."\n\nNếu muốn tóm tắt lại bằng Sơ đồ tư duy, Anh/Chị sẽ gợi ý bé chọn những từ khóa cốt lõi nào?',
       passage: 'Quả cam có màu cam rất đẹp, cung cấp nhiều vitamin C giúp cơ thể tăng sức đề kháng, chống lại bệnh tật.',
       items: [
         { id: 'k1', branch: 'Nhánh chính (Trái cây)', correct: 'QUẢ CAM', options: ['CÓ MÀU ĐẸP', 'QUẢ CAM', 'NHIỀU LẮM', 'GIÚP CƠ THỂ'] },
@@ -237,8 +237,8 @@ const MODULES = [
       title: 'Câu hỏi Tương tác: Chắt lọc tinh hoa',
       questions: [
         { q: 'Việc Vmindsports khuyến khích nguyên tắc "Một nhánh một từ khóa" mang lại ý nghĩa sâu xa gì?', opts: ['Giúp tiết kiệm diện tích giấy vẽ', 'Giúp bộ não chủ động phân tích, tóm gọn ý và mở ra những "khoảng trống" để tư duy liên tưởng phát triển', 'Để bức vẽ trông bí ẩn hơn'], correct: 1 },
-        { q: 'Bên cạnh ghi nhớ, kỹ năng chắt lọc từ khóa còn giúp ích gì cho con khi học các môn xã hội?', opts: ['Giúp con xây dựng dàn ý logic, nắm vững ý chính - ý phụ, tránh lạc đề khi làm văn', 'Giúp con học thuộc lòng văn mẫu từng chữ một', 'Giúp con cải thiện nét chữ viết tay'], correct: 0 },
-        { q: 'Khi chuyển thông tin từ sách lên Mind Map, Ba Mẹ có thể khuyên con lược bỏ nhóm từ nào để bản đồ gọn gàng hơn?', opts: ['Danh từ và Động từ mang ý nghĩa chính', 'Những từ nối, từ đệm bổ trợ (như: là, thì, mà, của, những)', 'Các con số và mốc thời gian quan trọng'], correct: 1 }
+        { q: 'Bên cạnh ghi nhớ, kỹ năng chắt lọc từ khóa còn giúp ích gì cho bé khi học các môn xã hội?', opts: ['Giúp bé xây dựng dàn ý logic, nắm vững ý chính - ý phụ, tránh lạc đề khi làm văn', 'Giúp bé học thuộc lòng văn mẫu từng chữ một', 'Giúp bé cải thiện nét chữ viết tay'], correct: 0 },
+        { q: 'Khi chuyển thông tin từ sách lên Mind Map, Anh/Chị có thể khuyên bé lược bỏ nhóm từ nào để bản đồ gọn gàng hơn?', opts: ['Danh từ và Động từ mang ý nghĩa chính', 'Những từ nối, từ đệm bổ trợ (như: là, thì, mà, của, những)', 'Các con số và mốc thời gian quan trọng'], correct: 1 }
       ]
     }
   },
@@ -247,34 +247,34 @@ const MODULES = [
     icon: '🚀', duration: '10 phút', color: 'bee',
     content: {
       imageUrl: 'MM_Bai5.jpg',
-      intro: "Chúc mừng Ba Mẹ đã cùng Vmindsports điểm qua 5 quy luật cốt lõi của Mind Map chuẩn Tony Buzan!\n\nNhìn lại một bức Mind Map hoàn chỉnh, Ba Mẹ sẽ thấy các nhánh tỏa ra cân bằng và đẹp mắt. Khi bắt đầu từ góc 1 giờ và xoay theo chiều kim đồng hồ, mạch tư duy của con sẽ được rèn luyện sự trôi chảy, hệ thống.\n\nSau khi đã hiểu rõ phương pháp, đây chính là thời điểm tuyệt vời để Ba Mẹ trao cho con cơ hội thực hành!",
+      intro: "Chúc mừng Anh/Chị đã cùng Vmindsports điểm qua 5 quy luật cốt lõi của Mind Map chuẩn Tony Buzan!\n\nNhìn lại một bức Mind Map hoàn chỉnh, Anh/Chị sẽ thấy các nhánh tỏa ra cân bằng và đẹp mắt. Khi bắt đầu từ góc 1 giờ và xoay theo chiều kim đồng hồ, mạch tư duy của bé sẽ được rèn luyện sự trôi chảy, hệ thống.\n\nSau khi đã hiểu rõ phương pháp, đây chính là thời điểm tuyệt vời để Anh/Chị trao cho bé cơ hội thực hành!",
       keyPoints: [
-        { title: 'Tư duy liên kết mạng nhện', text: 'Trong quá trình vẽ, con có thể nhận ra điểm giao thoa giữa bài Toán và Khoa học. Việc nối các đường mũi tên liên kết giữa các nhánh chính là khoảnh khắc trí thông minh kết nối của con bừng sáng.' },
-        { title: 'Món quà đồng hành từ Vmindsports', text: 'Trẻ em luôn học hỏi tốt nhất thông qua niềm vui và trò chơi. Nhằm giúp con làm quen với Mind Map một cách tự nhiên nhất, Vmindsports đã ấp ủ dự án "KHO BÁU 100 TỪ ĐẦU ĐỜI".' },
-        { title: 'Dự án Kho Báu 100 Từ là gì?', text: 'Đây là một hệ sinh thái học tập tương tác thiết kế riêng cho trẻ. Bé sẽ hóa thân thành nhà thám hiểm, khám phá 15 hòn đảo từ vựng Tiếng Anh. Mỗi hòn đảo là một sơ đồ tư duy rực rỡ, giúp con vừa chơi vừa thẩm thấu phương pháp học tập mới!' }
+        { title: 'Tư duy liên kết mạng nhện', text: 'Trong quá trình vẽ, bé có thể nhận ra điểm giao thoa giữa bài Toán và Khoa học. Việc nối các đường mũi tên liên kết giữa các nhánh chính là khoảnh khắc trí thông minh kết nối của bé bừng sáng.' },
+        { title: 'Món quà đồng hành từ Vmindsports', text: 'Trẻ em luôn học hỏi tốt nhất thông qua niềm vui và trò chơi. Nhằm giúp bé làm quen với Mind Map một cách tự nhiên nhất, Vmindsports đã ấp ủ dự án "KHO BÁU 100 TỪ ĐẦU ĐỜI".' },
+        { title: 'Dự án Kho Báu 100 Từ là gì?', text: 'Đây là một hệ sinh thái học tập tương tác thiết kế riêng cho trẻ. Bé sẽ hóa thân thành nhà thám hiểm, khám phá 15 hòn đảo từ vựng Tiếng Anh. Mỗi hòn đảo là một sơ đồ tư duy rực rỡ, giúp bé vừa chơi vừa thẩm thấu phương pháp học tập mới!' }
       ],
       levelExamples: {
-        beginner: '💎 Bước 1: Ba Mẹ hoàn thành phần bài tập cuối cùng này để nhận Chứng Nhận "Parent Partner" có ID danh dự nhé.',
-        intermediate: '💎 Bước 2: Ba Mẹ có thể chia sẻ Chứng nhận lên Facebook để lưu giữ kỷ niệm về hành trình học tập cùng con.',
+        beginner: '💎 Bước 1: Anh/Chị hoàn thành phần bài tập cuối cùng này để nhận Chứng Nhận "Parent Partner" có ID danh dự nhé.',
+        intermediate: '💎 Bước 2: Anh/Chị có thể chia sẻ Chứng nhận lên Facebook để lưu giữ kỷ niệm về hành trình học tập cùng bé.',
         advanced: '💎 Bước 3: Đón chờ thông báo từ Vmindsports để cùng bé yêu mở khóa Web App "Kho Báu 100 Từ" trong thời gian sớm nhất!'
       }
     },
     exercise: {
       type: 'application',
-      title: 'Khế Ước Đồng Hành Cùng Con',
-      instructions: 'Ba Mẹ đã sẵn sàng bước tiếp? Xin mời Ba Mẹ để lại vài dòng cảm nhận và lời hứa đồng hành cùng con trên chặng đường Tư duy Sáng tạo nhé:',
+      title: 'Khế Ước Đồng Hành Cùng Bé',
+      instructions: 'Anh/Chị đã sẵn sàng bước tiếp? Xin mời Anh/Chị để lại vài dòng cảm nhận và lời hứa đồng hành cùng bé trên chặng đường Tư duy Sáng tạo nhé:',
       prompts: [
-        { id: 'ap1', question: 'Sau khi tìm hiểu, Ba Mẹ cảm thấy Sơ đồ Tư duy có thể hỗ trợ con tốt nhất ở điểm nào?', placeholder: 'Ví dụ: "Mình thấy phương pháp này sẽ giúp con có cái nhìn bao quát và vui vẻ hơn khi ôn bài..."' },
-        { id: 'ap2', question: 'Ba Mẹ có sẵn lòng cho bé trải nghiệm phương pháp học mới qua dự án "Kho Báu 100 Từ Đầu Đời" không?', placeholder: 'Ví dụ: "Gia đình rất sẵn lòng, bé nhà mình chắc chắn sẽ thích..."' },
-        { id: 'ap3', question: 'Cuối cùng, xin Ba Mẹ gửi tặng một lời chúc ngọt ngào nhất đến bé yêu của mình:', placeholder: 'Ví dụ: "Mỗi bước tiến của con đều là niềm tự hào của ba mẹ, yêu con!"' }
+        { id: 'ap1', question: 'Sau khi tìm hiểu, Anh/Chị cảm thấy Sơ đồ Tư duy có thể hỗ trợ bé tốt nhất ở điểm nào?', placeholder: 'Ví dụ: "Mình thấy phương pháp này sẽ giúp bé có cái nhìn bao quát và vui vẻ hơn khi ôn bài..."' },
+        { id: 'ap2', question: 'Anh/Chị có sẵn lòng cho bé trải nghiệm phương pháp học mới qua dự án "Kho Báu 100 Từ Đầu Đời" không?', placeholder: 'Ví dụ: "Gia đình rất sẵn lòng, bé nhà mình chắc chắn sẽ thích..."' },
+        { id: 'ap3', question: 'Cuối cùng, xin Anh/Chị gửi tặng một lời chúc ngọt ngào nhất đến bé yêu của mình:', placeholder: 'Ví dụ: "Mỗi bước tiến của bé đều là niềm tự hào của anh/chị, yêu bé!"' }
       ]
     },
     assessment: {
       title: 'Câu hỏi Tương tác: Vững bước Tương lai',
       questions: [
         { q: 'Theo gợi ý về Bố cục Không gian, nhánh đầu tiên thường được khuyến khích xuất phát từ vị trí nào?', opts: ['Từ góc dưới cùng bên trái của trang giấy', 'Từ góc 1 giờ và triển khai dần theo chiều kim đồng hồ', 'Có thể bắt đầu ở bất kỳ vị trí trống nào'], correct: 1 },
-        { q: 'Khi thấy con dùng đường mũi tên nét đứt để nối hai ý tưởng ở hai nhánh khác nhau, Ba Mẹ nên hiểu điều này thế nào?', opts: ['Đó là dấu hiệu tuyệt vời cho thấy con đang vận dụng tư duy phân tích, nhìn ra mối liên hệ sâu sắc giữa các thông tin', 'Con đang vẽ trang trí thêm cho bức tranh khỏi trống', 'Con lỡ tay gạch nhầm nên đang cố sửa'], correct: 0 },
-        { q: 'Hành động ý nghĩa nhất Ba Mẹ có thể thực hiện sau khi hoàn thành trải nghiệm Web App này là gì?', opts: ['Yêu cầu con từ nay chỉ được dùng Mind Map và không bao giờ chép bài nữa', 'Trân trọng các nỗ lực học tập hiện tại của con, và vui vẻ giới thiệu cho con trải nghiệm Mind Map qua dự án "Kho Báu 100 Từ"', 'Mua thật nhiều sách chữ về để con rèn luyện thói quen đọc'], correct: 1 }
+        { q: 'Khi thấy bé dùng đường mũi tên nét đứt để nối hai ý tưởng ở hai nhánh khác nhau, Anh/Chị nên hiểu điều này thế nào?', opts: ['Đó là dấu hiệu tuyệt vời cho thấy bé đang vận dụng tư duy phân tích, nhìn ra mối liên hệ sâu sắc giữa các thông tin', 'Bé đang vẽ trang trí thêm cho bức tranh khỏi trống', 'Bé lỡ tay gạch nhầm nên đang cố sửa'], correct: 0 },
+        { q: 'Hành động ý nghĩa nhất Anh/Chị có thể thực hiện sau khi hoàn thành trải nghiệm Web App này là gì?', opts: ['Yêu cầu bé từ nay chỉ được dùng Mind Map và không bao giờ chép bài nữa', 'Trân trọng các nỗ lực học tập hiện tại của bé, và vui vẻ giới thiệu cho bé trải nghiệm Mind Map qua dự án "Kho Báu 100 Từ"', 'Mua thật nhiều sách chữ về để bé rèn luyện thói quen đọc'], correct: 1 }
       ]
     }
   }
@@ -298,20 +298,20 @@ function GateScreen() {
     <div className="min-h-screen fun-bg flex items-center justify-center p-4">
       <div className="max-w-md w-full fade-in text-center">
         <img src="logo-vmindsports.png" alt="Vmindsports" className="w-32 h-32 mx-auto mb-2 float drop-shadow-md" />
-        <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-2">Khám Phá Sơ Đồ Tư Duy Cùng Con</h1>
-        <p className="text-gray-500 text-sm mb-6">Bí quyết giúp con ghi nhớ & tư duy hiệu quả · Vmindsports</p>
+        <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-2">Khám Phá Sơ Đồ Tư Duy Cùng Bé</h1>
+        <p className="text-gray-500 text-sm mb-6">Bí quyết giúp bé ghi nhớ & tư duy hiệu quả · Vmindsports</p>
         <div className="glow-border"><div className="bg-white rounded-xl p-6 sm:p-8">
           <img src="ong-vmindsports.png" alt="Ong Vmindsports" className="w-20 h-20 mx-auto mb-4 float drop-shadow-sm" />
           <h2 className="text-xl font-bold text-gray-800 mb-4">Chào mừng Gia đình đến với Ứng dụng Khám phá Sơ đồ tư duy chuẩn</h2>
-          <p className="text-gray-500 text-sm mb-6">Ba Mẹ đăng ký để trải nghiệm 5 bài học Mind Map miễn phí, nhận Chứng nhận và quà tặng đặc biệt cho bé yêu nhé!</p>
+          <p className="text-gray-500 text-sm mb-6">Anh/Chị đăng ký để trải nghiệm 5 bài học Mind Map miễn phí, nhận Chứng nhận và quà tặng đặc biệt cho bé yêu nhé!</p>
           <a href={LADIPAGE_URL} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="w-full pulse-glow">Đăng ký trải nghiệm miễn phí →</Button>
           </a>
           <div className="mt-4 pt-4 border-t border-gray-100">
-            <p className="text-xs text-gray-400">Ba Mẹ đã đăng ký rồi? Vui lòng bấm vào link trong Email nhé! 📧</p>
+            <p className="text-xs text-gray-400">Anh/Chị đã đăng ký rồi? Vui lòng bấm vào link trong Email nhé! 📧</p>
           </div>
         </div></div>
-        <p className="text-center text-xs text-gray-400 mt-6">© Vmindsports · Khám Phá Sơ Đồ Tư Duy Cùng Con</p>
+        <p className="text-center text-xs text-gray-400 mt-6">© Vmindsports · Khám Phá Sơ Đồ Tư Duy Cùng Bé</p>
       </div>
     </div>
   );
@@ -328,14 +328,14 @@ function Registration({ onSubmit, defaultName, defaultEmail }) {
       <div className="max-w-md w-full fade-in">
         <div className="text-center mb-6">
           <img src="logo-vmindsports.png" alt="Vmindsports" className="w-32 h-32 mx-auto mb-2 float drop-shadow-md" />
-          <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-1">Khám Phá Sơ Đồ Tư Duy Cùng Con</h1>
-          <p className="text-gray-500 text-sm">Xác nhận thông tin của Ba Mẹ</p>
+          <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-1">Khám Phá Sơ Đồ Tư Duy Cùng Bé</h1>
+          <p className="text-gray-500 text-sm">Xác nhận thông tin của Anh/Chị</p>
         </div>
         <div className="glow-border"><div className="bg-white rounded-xl p-6 sm:p-8">
           <h2 className="text-xl font-bold text-gray-800 mb-1 text-center">Xác nhận để bắt đầu</h2>
           <p className="text-xs text-gray-400 text-center mb-5">Tên sẽ hiển thị trên Chứng nhận</p>
           <div className="space-y-4">
-            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Họ tên Ba/Mẹ *</label><input className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-bee-500 focus:outline-none transition text-gray-800" placeholder="VD: Nguyễn Văn A" value={name} onChange={e=>setName(e.target.value)} /></div>
+            <div><label className="block text-sm font-semibold text-gray-700 mb-1">Họ tên Anh/Chị *</label><input className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-bee-500 focus:outline-none transition text-gray-800" placeholder="VD: Nguyễn Văn A" value={name} onChange={e=>setName(e.target.value)} /></div>
             <div><label className="block text-sm font-semibold text-gray-700 mb-1">Email *</label><input type="email" className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-ocean-500 focus:outline-none transition text-gray-800" placeholder="email@example.com" value={email} onChange={e=>setEmail(e.target.value)} /></div>
           </div>
           <div className="mt-6"><Button size="lg" className="w-full pulse-glow" onClick={()=>{ if(name.trim()&&email.trim()) onSubmit(name.trim(),email.trim()); }} disabled={!name.trim()||!email.trim()}>Bắt đầu học 🐝</Button></div>
@@ -355,7 +355,7 @@ function Onboarding({ userName, onSelect }) {
         <div className="text-center mb-6">
           <img src="logo-vmindsports.png" alt="Vmindsports" className="w-28 h-28 mx-auto mb-4 drop-shadow-md" />
           <h2 className="text-2xl font-black text-gray-900">Mến chào <span className="text-bee-600">{userName}</span> 🐝</h2>
-          <p className="text-gray-500 mt-1">Con yêu của Ba Mẹ đang ở độ tuổi nào?</p>
+          <p className="text-gray-500 mt-1">Bé yêu của Anh/Chị đang ở độ tuổi nào?</p>
         </div>
         <div className="space-y-3">
           {LEVELS.map((lv,i) => (
@@ -386,18 +386,18 @@ function Dashboard({ progress, onSelectModule, onCertificate, userName, onEditNa
       <div className="max-w-lg mx-auto fade-in">
         <div className="text-center mb-4 pt-1">
           <img src="logo-vmindsports.png" alt="Vmindsports" className="w-28 h-28 mx-auto mb-2 drop-shadow-sm" />
-          <h1 className="text-2xl font-black text-gray-900">Khám Phá Sơ Đồ Tư Duy Cùng Con</h1>
-          <p className="text-sm text-gray-500">Bí quyết giúp con ghi nhớ & tư duy hiệu quả · Vmindsports</p>
+          <h1 className="text-2xl font-black text-gray-900">Khám Phá Sơ Đồ Tư Duy Cùng Bé</h1>
+          <p className="text-sm text-gray-500">Bí quyết giúp bé ghi nhớ & tư duy hiệu quả · Vmindsports</p>
           {/* Hiển thị tên + nút sửa */}
           <div className="mt-3 flex flex-col items-center gap-1">
             {!editingName ? (
               <>
-                <span className="text-sm text-gray-600">Mến chào Ba/Mẹ <strong className="text-bee-600">{userName}</strong>
+                <span className="text-sm text-gray-600">Mến chào Anh/Chị <strong className="text-bee-600">{userName}</strong>
                   <button onClick={()=>{setNewName(userName);setEditingName(true);}} className="inline-block ml-1.5 text-gray-300 hover:text-bee-500 transition-colors align-middle" title="Chỉnh sửa tên">
                     <span className="text-sm">✏️</span>
                   </button>
                 </span>
-                <p className="text-[11px] text-gray-300 italic">Tên sẽ được ghi trên Chứng nhận · Vui lòng nhấn ✏️ nếu Ba/Mẹ muốn chỉnh sửa</p>
+                <p className="text-[11px] text-gray-300 italic">Tên sẽ được ghi trên Chứng nhận · Vui lòng nhấn ✏️ nếu Anh/Chị muốn chỉnh sửa</p>
               </>
             ) : (
               <div className="bg-white rounded-xl p-3 shadow-md border border-bee-200 w-full max-w-xs fade-in">
@@ -659,7 +659,7 @@ function LessonView({ moduleId, level, progress, onBack, onUpdateProgress }) {
                 </div>
               ))}
               <div className="bg-bee-50 rounded-xl p-4 border border-bee-200">
-                <p className="text-xs font-bold text-bee-700 mb-1">💡 Gợi ý cho Ba Mẹ</p>
+                <p className="text-xs font-bold text-bee-700 mb-1">💡 Gợi ý cho Anh/Chị</p>
                 <p className="text-sm text-gray-700">{mod.content.levelExamples[level]||mod.content.levelExamples.advanced}</p>
               </div>
               <div className="text-center"><Button onClick={()=>{setTab('challenge');SoundManager.playClick();}}>Bắt đầu Thử thách 🧩</Button></div>
@@ -681,7 +681,7 @@ function LessonView({ moduleId, level, progress, onBack, onUpdateProgress }) {
           )}
           {tab==='challenge' && progress[mod.id]?.done && (
             <div className="text-center py-6 fade-in"><div className="text-4xl mb-2">🎉</div><p className="font-bold text-gray-800 mb-1">Hoàn thành xuất sắc!</p><p className="text-gray-500 text-sm mb-4">Điểm: {progress[mod.id].assessment}%</p>
-            {mod.id === 3 && <div className="bg-bee-50 rounded-xl p-4 border border-bee-200 mb-4 text-left"><p className="text-sm text-gray-700">💡 <strong>Ba Mẹ có biết?</strong> Các bé tại CLB Vmindsports vẽ Mind Map thành thạo chỉ sau 4 tuần rèn luyện! <a href="https://www.thethaotuduy.com" target="_blank" rel="noopener noreferrer" className="text-ocean-600 font-bold hover:underline">Tìm hiểu thêm →</a></p></div>}
+            {mod.id === 3 && <div className="bg-bee-50 rounded-xl p-4 border border-bee-200 mb-4 text-left"><p className="text-sm text-gray-700">💡 <strong>Anh/Chị có biết?</strong> Các bé tại CLB Vmindsports vẽ Mind Map thành thạo chỉ sau 4 tuần rèn luyện! <a href="https://www.thethaotuduy.com" target="_blank" rel="noopener noreferrer" className="text-ocean-600 font-bold hover:underline">Tìm hiểu thêm →</a></p></div>}
             <Button onClick={onBack}>← Quay về Dashboard</Button></div>
           )}
         </div>
@@ -834,7 +834,7 @@ function Certificate({ userName, level, progress, registeredAt, onBack }) {
             <p className="text-xs sm:text-sm text-gray-500 mb-2">{txt.desc}</p>
             <h4 className="text-lg sm:text-xl font-black text-[#1e3a8a] mb-2">{txt.program}</h4>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              {txt.descSuffix} <strong className="text-[#1e3a8a]">🧠 {trackName}</strong>{lang === 'vi' ? ', giúp Ba Mẹ sẵn sàng đồng hành cùng con trên hành trình tư duy sáng tạo.' : ', ready to support your child on their creative thinking journey.'}
+              {txt.descSuffix} <strong className="text-[#1e3a8a]">🧠 {trackName}</strong>{lang === 'vi' ? ', giúp Anh/Chị sẵn sàng đồng hành cùng bé trên hành trình tư duy sáng tạo.' : ', ready to support your child on their creative thinking journey.'}
             </p>
           </div>
 
@@ -889,7 +889,7 @@ function Certificate({ userName, level, progress, registeredAt, onBack }) {
           <div className="bg-gradient-to-r from-bee-50 to-ocean-50 rounded-2xl p-5 sm:p-6 border-2 border-bee-300 text-center shadow-lg">
             <div className="text-4xl mb-2">🎁</div>
             <h3 className="text-lg sm:text-xl font-black text-gray-900 mb-2">Quà tặng dành cho Phụ huynh Xuất sắc!</h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">Con yêu của Ba Mẹ xứng đáng được trải nghiệm <strong className="text-bee-600">MIỄN PHÍ 1 buổi rèn luyện</strong> tại CLB Vmindsports!</p>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">Bé yêu của Anh/Chị xứng đáng được trải nghiệm <strong className="text-bee-600">MIỄN PHÍ 1 buổi rèn luyện</strong> tại CLB Vmindsports!</p>
             <a href="https://www.thethaotuduy.com" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="w-full sm:w-auto pulse-glow">👉 Đăng ký lớp học thử MIỄN PHÍ cho bé</Button>
             </a>
