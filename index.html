@@ -85,7 +85,6 @@ const LEVELS = [
   { id:'preschool', icon:'👶', name:'Bé đang học Mầm non - Lớp 2', desc:'Giúp bé tập trung & ghi nhớ bài thông qua hình ảnh và màu sắc', color:'from-pink-400 to-rose-500' },
   { id:'primary', icon:'📗', name:'Bé đang học Lớp 3 - Lớp 5', desc:'Hỗ trợ bé hệ thống hóa bài vở, ôn thi hiệu quả', color:'from-bee-500 to-ocean-500' },
   { id:'secondary', icon:'📘', name:'Bé đang học Lớp 6 - Lớp 9', desc:'Rèn tư duy phân tích, tóm tắt bài nhanh gọn', color:'from-blue-500 to-cyan-500' },
-  { id:'family', icon:'🏡', name:'Ứng dụng cho gia đình & công việc', desc:'Lên kế hoạch, sắp xếp cuộc sống gia đình khoa học', color:'from-emerald-500 to-teal-500' },
 ];
 
 const MODULES = [
@@ -102,7 +101,7 @@ const MODULES = [
       ],
       levelExamples: {
         beginner: '💡 Mẹo nhỏ Tối nay: Khi bé kể chuyện trên trường, bên cạnh việc lắng nghe, Anh/Chị có thể lấy 1 tờ giấy trắng, vẽ 1 vòng tròn ở giữa và gợi ý: "Nào, bé kể tiếp đi, mỗi câu chuyện mình cùng vẽ 1 nhánh tỏa ra nhé!"',
-        intermediate: '💡 Lời khen diệu kỳ: Thay vì kỳ vọng một bức vẽ hoàn hảo, chỉ cần bé chịu cầm màu lên, Anh/Chị có thể khích lệ: "Màu bé chọn rực rỡ quá, mẹ/ba rất thích nhánh này!"',
+        intermediate: '💡 Lời khen diệu kỳ: Thay vì kỳ vọng một bức vẽ hoàn hảo, chỉ cần bé chịu cầm màu lên, Anh/Chị có thể khích lệ: "Màu con chọn rực rỡ quá, nhìn thích lắm!"',
         advanced: '💡 Trò chơi Gia đình: Cả nhà có thể cùng vẽ 1 bức Mind Map "Thực đơn cuối tuần". Mỗi người chọn đóng góp 1 nhánh. Bé sẽ cảm nhận được việc học cũng vui như một trò chơi cùng gia đình.'
       }
     },
@@ -141,9 +140,9 @@ const MODULES = [
         { title: '5. BỐ CỤC: "Theo chiều kim đồng hồ"', text: '• Nhánh đầu tiên thường xuất phát ở góc 1 giờ.\n• Đọc xoay tròn theo chiều kim đồng hồ, giúp tạo quán tính tự nhiên và trôi chảy cho ánh mắt.' }
       ],
       levelExamples: {
-        beginner: '💡 Nút gỡ rối cho Anh/Chị: Nếu bé quen dùng thước kẻ, Anh/Chị có thể nhẹ nhàng gợi ý: "Mình thử vẽ đường đi của bạn kiến quanh co cho bài vẽ thêm sinh động bé nhé!"',
+        beginner: '💡 Nút gỡ rối cho Anh/Chị: Nếu bé quen dùng thước kẻ, Anh/Chị có thể nhẹ nhàng gợi ý: "Mình thử vẽ đường đi của bạn kiến quanh co cho bài vẽ thêm sinh động nha!"',
         intermediate: '💡 Khi bé viết câu quá dài: Anh/Chị có thể hỏi gợi mở: "Nếu chỉ được giữ lại đúng 1 chữ quan trọng nhất, bé sẽ chọn chữ nào nhỉ?". Đây là cách rèn kỹ năng chắt lọc rất nhẹ nhàng.',
-        advanced: '💡 Nuôi dưỡng tự tin: Nếu bé ngần ngại vì chưa biết vẽ, Anh/Chị có thể động viên: "Mind Map chỉ cần những hình khối đơn giản thôi bé ạ. 3 vòng tròn ghép lại cũng thành một đám mây rất xinh rồi!"'
+        advanced: '💡 Nuôi dưỡng tự tin: Nếu bé ngần ngại vì chưa biết vẽ, Anh/Chị có thể động viên: "Mind Map chỉ cần những hình khối đơn giản thôi ạ. 3 vòng tròn ghép lại cũng thành một đám mây rất xinh rồi!"'
       }
     },
     exercise: {
@@ -595,7 +594,7 @@ function Quiz({ assessment, onComplete }) {
       <div className="text-5xl mb-3">{score>=80?'🎉':score>=60?'👍':'💪'}</div>
       <h3 className="text-2xl font-black text-gray-900 mb-1">Kết quả: {score}%</h3>
       <p className="text-gray-500 mb-1">{totalCorrect}/{qs.length} câu đúng</p>
-      <p className="text-sm text-gray-400 mb-4">{score>=80?'Xuất sắc! Bạn nắm vững kiến thức.':score>=60?'Khá tốt! Ôn lại vài điểm nhé.':'Hãy đọc lại bài học và thử lại!'}</p>
+      <p className="text-sm text-gray-400 mb-4">{score>=80?'Xuất sắc! Anh/Chị nắm vững kiến thức.':score>=60?'Khá tốt! Ôn lại vài điểm nhé.':'Hãy đọc lại bài học và thử lại!'}</p>
       <Button onClick={()=>onComplete(score)} variant="success">Hoàn thành bài này ✅</Button>
     </div>
   );
